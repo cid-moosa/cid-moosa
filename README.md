@@ -39,6 +39,13 @@
   <img src="https://raw.githubusercontent.com/cid-moosa/cid-moosa/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
 </div>
 
+<br/>
+
+<!-- Real-Time Signal & Packet Spectrum Analyzer Animation -->
+<div align="center">
+  <img src="./assets/cyber-spectrum.svg" width="100%" alt="Forensics Spectrum Analyzer" />
+</div>
+
 <img src="./assets/cyber-radar.svg" width="100%" alt="Divider" />
 
 ### 🔬 Forensics & Hardware Research Operations

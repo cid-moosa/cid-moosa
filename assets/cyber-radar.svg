@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 80" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 70" width="100%" height="100%">
   <defs>
     <linearGradient id="gradDiv" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00ff66" stop-opacity="0" />
@@ -7,7 +7,7 @@
       <stop offset="75%" stop-color="#7000ff" stop-opacity="0.8" />
       <stop offset="100%" stop-color="#7000ff" stop-opacity="0" />
     </linearGradient>
-    <filter id="glowD">
+    <filter id="glowD" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
@@ -16,45 +16,54 @@
     </filter>
   </defs>
   <style>
-    @keyframes pulseNode {
-      0%, 100% { transform: scale(1); opacity: 0.6; }
-      50% { transform: scale(1.4); opacity: 1; filter: drop-shadow(0 0 8px #00ff66); }
+    @keyframes pulseRing {
+      0% { r: 6px; opacity: 1; }
+      50% { r: 14px; opacity: 0.4; }
+      100% { r: 22px; opacity: 0; }
     }
-    @keyframes sweepLine {
-      0% { transform: translateX(-900px); }
-      100% { transform: translateX(900px); }
+    @keyframes pulseCore {
+      0%, 100% { opacity: 0.7; r: 5px; }
+      50% { opacity: 1; r: 7px; filter: drop-shadow(0 0 8px #00ff66); }
     }
-    .node-pulse {
-      transform-origin: center;
-      animation: pulseNode 2.5s infinite ease-in-out;
+    @keyframes laserSweep {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
     }
-    .sweep {
-      animation: sweepLine 3s infinite linear;
+    .core-dot {
+      animation: pulseCore 2s infinite ease-in-out;
+    }
+    .expanding-ring {
+      animation: pulseRing 2s infinite ease-out;
+    }
+    .laser-line {
+      stroke-dasharray: 80 120;
+      animation: laserSweep 3s linear infinite;
     }
     .radar-text {
-      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
       font-size: 10px;
-      letter-spacing: 4px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
       fill: #00ff66;
     }
   </style>
 
-  <rect width="900" height="80" fill="transparent" />
+  <rect width="900" height="70" fill="transparent" />
 
-  <!-- Center Hexagon / Target Node -->
-  <g transform="translate(450, 40)">
-    <circle cx="0" cy="0" r="16" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.4" />
-    <circle cx="0" cy="0" r="8" fill="#00ff66" class="node-pulse" filter="url(#glowD)" />
-    <text y="-22" text-anchor="middle" class="radar-text">[ RF • FREQUENCY SPECTRUM • HARDWARE TELEMETRY ]</text>
-  </g>
+  <!-- Left & Right Flowing Laser Beams -->
+  <line x1="30" y1="35" x2="350" y2="35" stroke="url(#gradDiv)" stroke-width="2" class="laser-line" filter="url(#glowD)" />
+  <line x1="550" y1="35" x2="870" y2="35" stroke="url(#gradDiv)" stroke-width="2" class="laser-line" filter="url(#glowD)" />
 
-  <!-- Left & Right Sweeping Laser Lines -->
-  <line x1="40" y1="40" x2="415" y2="40" stroke="url(#gradDiv)" stroke-width="2" filter="url(#glowD)" />
-  <line x1="485" y1="40" x2="860" y2="40" stroke="url(#gradDiv)" stroke-width="2" filter="url(#glowD)" />
+  <!-- Fixed Target Nodes -->
+  <circle cx="30" cy="35" r="3" fill="#00ff66" />
+  <circle cx="180" cy="35" r="2.5" fill="#00f0ff" />
+  <circle cx="720" cy="35" r="2.5" fill="#00f0ff" />
+  <circle cx="870" cy="35" r="3" fill="#7000ff" />
 
-  <!-- Circuit nodes -->
-  <circle cx="40" cy="40" r="3" fill="#00ff66" />
-  <circle cx="200" cy="40" r="2.5" fill="#00f0ff" />
-  <circle cx="700" cy="40" r="2.5" fill="#00f0ff" />
-  <circle cx="860" cy="40" r="3" fill="#7000ff" />
+  <!-- Center Radar Telemetry Hub (Perfect Absolute Coordinates) -->
+  <circle cx="450" cy="35" r="16" fill="none" stroke="#00f0ff" stroke-width="1.2" opacity="0.4" />
+  <circle cx="450" cy="35" class="expanding-ring" fill="none" stroke="#00ff66" stroke-width="1.5" />
+  <circle cx="450" cy="35" class="core-dot" fill="#00ff66" filter="url(#glowD)" />
+  
+  <text x="450" y="16" text-anchor="middle" class="radar-text">[ RF SPECTRUM // TELEMETRY LINK ]</text>
 </svg>
