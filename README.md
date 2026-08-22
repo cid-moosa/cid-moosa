@@ -20,7 +20,7 @@
 
 </div>
 
-<img src="./assets/cyber-radar.svg" width="100%" alt="Divider" />
+<img src="./assets/cyber-divider.svg" width="100%" alt="Divider" />
 
 ### 🛰️ Forensics Dossier & Investigator Profile
 ```ini
@@ -46,7 +46,7 @@
   <img src="./assets/cyber-spectrum.svg" width="100%" alt="Forensics Spectrum Analyzer" />
 </div>
 
-<img src="./assets/cyber-radar.svg" width="100%" alt="Divider" />
+<img src="./assets/cyber-divider.svg" width="100%" alt="Divider" />
 
 ### 🔬 Forensics & Hardware Research Operations
 
@@ -113,7 +113,7 @@
   </tr>
 </table>
 
-<img src="./assets/cyber-radar.svg" width="100%" alt="Divider" />
+<img src="./assets/cyber-divider.svg" width="100%" alt="Divider" />
 
 ### 🛠️ Cyber Forensics & Investigation Arsenal
 
@@ -163,7 +163,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 </details>
 
-<img src="./assets/cyber-radar.svg" width="100%" alt="Divider" />
+<img src="./assets/cyber-divider.svg" width="100%" alt="Divider" />
 
 ### 📈 Forensics Activity Radar & Metrics
 
