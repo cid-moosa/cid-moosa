@@ -5,7 +5,7 @@
 
 <!-- Dynamic Animated Cyber Forensics Terminal Typing SVG -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=00FF66&center=true&vCenter=true&width=750&lines=%24+volatility+-f+memdump.raw+imageinfo+--profile%3DLinux;%24+airmon-ng+start+wlan0+%26%26+airodump-ng+wlan0mon;%24+esptool.py+read_flash+0x0+0x400000+esp32_firmware.bin;%24+wireshark+-k+-i+wlan0mon+-Y+%22wlan.fc.type_subtype%3D%3D0x08%22;%24+reverse_eng_usb_otg+--target%3Dir_blaster+--capture-raw-hex;%24+17yo+Cyber+Forensics+Scholar+%E2%80%A2+Hardware+Hacker" alt="Typing Terminal" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=00FF66&center=true&vCenter=true&width=750&lines=%24+volatility+-f+memdump.raw+imageinfo+--profile%3DLinux;%24+airmon-ng+start+wlan0+%26%26+airodump-ng+wlan0mon;%24+esptool.py+read_flash+0x0+0x400000+esp32_firmware.bin;%24+wireshark+-k+-i+wlan0mon+-Y+%22wlan.fc.type_subtype%3D%3D0x08%22;%24+reverse_eng_usb_otg+--target%3Dir_blaster+--capture-raw-hex;%24+17yo+Cyber+Forensics+College+Undergrad+%E2%80%A2+Hardware+Hacker" alt="Typing Terminal" />
 </a>
 
 <br/>
@@ -25,11 +25,11 @@
 ### 🛰️ Forensics Dossier & Investigator Profile
 ```ini
 [INVESTIGATOR]: ARUN.P.S (alias: cid-moosa)
-[AGE / FOCUS]: 17-Year-Old Cyber Forensics & Digital Investigation Scholar
+[STATUS / LEVEL]: 17-Year-Old Cyber Forensics College Student & Digital Investigator
 [SPECIALIZATION]: Hardware Forensics, 802.11 RF Auditing, USB OTG Protocol Analysis, ROM Extraction
 [CORE_TENET]: "Every contact leaves a trace — from volatile memory registers to RF airwaves."
 ```
-> **I dissect technology at the silicon, signal, and packet levels.** As a 17-year-old cyber forensics student, my mission centers on breaking down how data travels, how hardware executes low-level instructions, and how digital artifacts can be intercepted, preserved, and decoded. Whether it's dumping SPI flash from embedded chips, building custom packet injection drivers, or reverse engineering USB OTG dongles, I investigate the boundary where hardware meets cybersecurity.
+> **I dissect technology at the silicon, signal, and packet levels.** As a 17-year-old cyber forensics college student, my mission centers on breaking down how data travels, how hardware executes low-level instructions, and how digital artifacts can be intercepted, preserved, and decoded. Whether it's dumping SPI flash from embedded chips, building custom packet injection drivers, or reverse engineering USB OTG dongles, I investigate the boundary where hardware meets cybersecurity.
 
 ---
 
