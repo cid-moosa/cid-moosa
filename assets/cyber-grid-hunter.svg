@@ -1,109 +1,119 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" width="100%" height="100%">
   <defs>
-    <!-- Screen Gradients -->
+    <!-- Background Gradient -->
     <linearGradient id="crtBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#020408" />
-      <stop offset="50%" stop-color="#090e18" />
-      <stop offset="100%" stop-color="#03060c" />
+      <stop offset="50%" stop-color="#080d16" />
+      <stop offset="100%" stop-color="#020408" />
     </linearGradient>
 
-    <linearGradient id="ghostGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ff0055" />
-      <stop offset="100%" stop-color="#ff5588" />
-    </linearGradient>
-
-    <filter id="neonP" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.5" result="blur" />
+    <!-- Neon Glow Filters -->
+    <filter id="neonG" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
 
-    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+    <filter id="strongG" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
 
-    <!-- Retro Dot Grid -->
-    <pattern id="arcadeGrid" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="11" cy="11" r="1.5" fill="#00ff66" fill-opacity="0.15" />
+    <!-- Grid Pattern -->
+    <pattern id="dotMatrix" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1.2" fill="#00ff66" fill-opacity="0.12" />
     </pattern>
   </defs>
 
   <style>
-    /* Pacman mouth chomping */
-    @keyframes chompTop {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(-35deg); }
-    }
-    @keyframes chompBot {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(35deg); }
+    /* Pacman Chomp (Scale Y of background wedge cutout) */
+    @keyframes chomp {
+      0%, 100% { transform: scaleY(0.08); }
+      50% { transform: scaleY(1); }
     }
 
-    /* Pacman movement across maze */
-    @keyframes pacmanMove {
+    /* Pacman Waypoint Pathing */
+    @keyframes pacmanPath {
       0% { transform: translate(30px, 90px); }
-      45% { transform: translate(420px, 90px); }
-      50% { transform: translate(420px, 140px); }
-      95% { transform: translate(810px, 140px); }
-      100% { transform: translate(850px, 140px); }
+      46% { transform: translate(430px, 90px); }
+      48% { transform: translate(430px, 140px); }
+      96% { transform: translate(840px, 140px); }
+      100% { transform: translate(880px, 140px); }
     }
 
-    /* Ghost chasing pacman */
-    @keyframes ghostMove {
-      0% { transform: translate(-40px, 90px); }
-      45% { transform: translate(350px, 90px); }
-      50% { transform: translate(350px, 140px); }
-      95% { transform: translate(740px, 140px); }
-      100% { transform: translate(780px, 140px); }
+    /* Ghost Chaser Pathing (Behind Pacman) */
+    @keyframes ghostPath {
+      0% { transform: translate(-30px, 90px); }
+      46% { transform: translate(370px, 90px); }
+      48% { transform: translate(370px, 140px); }
+      96% { transform: translate(780px, 140px); }
+      100% { transform: translate(820px, 140px); }
     }
 
-    /* Ghost float bounce */
+    /* Ghost Floating & Frightened Color Shift when Power Pellet is eaten */
     @keyframes ghostHover {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
+      50% { transform: translateY(-3px); }
     }
 
-    /* Pellets disappearing */
-    @keyframes pelletFade1 { 0%, 10% { opacity: 1; } 15%, 100% { opacity: 0.1; } }
-    @keyframes pelletFade2 { 0%, 25% { opacity: 1; } 30%, 100% { opacity: 0.1; } }
-    @keyframes pelletFade3 { 0%, 40% { opacity: 1; } 45%, 100% { opacity: 0.1; } }
-    @keyframes pelletFade4 { 0%, 65% { opacity: 1; } 70%, 100% { opacity: 0.1; } }
-    @keyframes pelletFade5 { 0%, 85% { opacity: 1; } 90%, 100% { opacity: 0.1; } }
-
-    /* CRT scanline sweep */
-    @keyframes crtScan {
-      0% { transform: translateY(-20px); }
-      100% { transform: translateY(220px); }
+    @keyframes ghostState {
+      0%, 55% { fill: #ff0055; }
+      60%, 85% { fill: #2b59ff; } /* Vulnerable / Frightened Blue */
+      86%, 100% { fill: #ff0055; }
     }
 
-    /* Score blink */
-    @keyframes scoreBlink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
+    /* Pellet Sequential Consumption Sync */
+    @keyframes dot1 { 0%, 6% { opacity: 1; } 10%, 100% { opacity: 0.08; } }
+    @keyframes dot2 { 0%, 14% { opacity: 1; } 18%, 100% { opacity: 0.08; } }
+    @keyframes dot3 { 0%, 22% { opacity: 1; } 26%, 100% { opacity: 0.08; } }
+    @keyframes dot4 { 0%, 30% { opacity: 1; } 34%, 100% { opacity: 0.08; } }
+    @keyframes dot5 { 0%, 38% { opacity: 1; } 42%, 100% { opacity: 0.08; } }
+    @keyframes dot6 { 0%, 46% { opacity: 1; } 50%, 100% { opacity: 0.08; } }
+    @keyframes dot7 { 0%, 58% { opacity: 1; } 62%, 100% { opacity: 0.08; } }
+    @keyframes dot8 { 0%, 68% { opacity: 1; } 72%, 100% { opacity: 0.08; } }
+    @keyframes dot9 { 0%, 78% { opacity: 1; } 82%, 100% { opacity: 0.08; } }
+    @keyframes dot10 { 0%, 88% { opacity: 1; } 92%, 100% { opacity: 0.08; } }
+
+    /* Power Pellet Flash */
+    @keyframes powerFlash {
+      0%, 100% { r: 6px; opacity: 1; fill: #00ff66; filter: drop-shadow(0 0 6px #00ff66); }
+      50% { r: 7.5px; opacity: 0.7; fill: #ffdd54; filter: drop-shadow(0 0 12px #ffdd54); }
     }
 
-    .pac-mouth-top { animation: chompTop 0.25s infinite linear; transform-origin: 14px 14px; }
-    .pac-mouth-bot { animation: chompBot 0.25s infinite linear; transform-origin: 14px 14px; }
-    .pacman-runner { animation: pacmanMove 8s infinite linear; }
-    .ghost-runner { animation: ghostMove 8s infinite linear; }
-    .ghost-body { animation: ghostHover 0.4s infinite ease-in-out; }
+    @keyframes crtSweep {
+      0% { transform: translateY(-10px); }
+      100% { transform: translateY(210px); }
+    }
 
-    .p1 { animation: pelletFade1 8s infinite; }
-    .p2 { animation: pelletFade2 8s infinite; }
-    .p3 { animation: pelletFade3 8s infinite; }
-    .p4 { animation: pelletFade4 8s infinite; }
-    .p5 { animation: pelletFade5 8s infinite; }
+    .mouth {
+      transform-origin: 0px 0px;
+      animation: chomp 0.28s infinite ease-in-out;
+    }
+    .pacman-actor { animation: pacmanPath 7s infinite linear; }
+    .ghost-actor { animation: ghostPath 7s infinite linear; }
+    .ghost-motion { animation: ghostHover 0.4s infinite ease-in-out; }
+    .ghost-color { animation: ghostState 7s infinite; }
 
-    .crt-line { animation: crtScan 3s linear infinite; }
-    .blink-text { animation: scoreBlink 1s infinite; }
+    .d1 { animation: dot1 7s infinite; }
+    .d2 { animation: dot2 7s infinite; }
+    .d3 { animation: dot3 7s infinite; }
+    .d4 { animation: dot4 7s infinite; }
+    .d5 { animation: dot5 7s infinite; }
+    .d6 { animation: dot6 7s infinite; }
+    .d7 { animation: dot7 7s infinite; }
+    .d8 { animation: dot8 7s infinite; }
+    .d9 { animation: dot9 7s infinite; }
+    .d10 { animation: dot10 7s infinite; }
 
-    .arcade-font {
+    .power-dot { animation: powerFlash 1s infinite; }
+    .scan-beam { animation: crtSweep 3.5s linear infinite; }
+
+    .hud-text {
       font-family: 'Courier New', 'SF Mono', 'Fira Code', monospace;
       font-weight: 900;
       font-size: 11px;
@@ -111,100 +121,106 @@
     }
   </style>
 
-  <!-- Arcade Outer Frame -->
-  <rect width="880" height="200" rx="12" fill="url(#crtBg)" stroke="#30363d" stroke-width="1.5" />
-  <rect width="880" height="200" rx="12" fill="url(#arcadeGrid)" />
+  <!-- Frame Background -->
+  <rect width="880" height="200" rx="10" fill="url(#crtBg)" stroke="#30363d" stroke-width="1.5" />
+  <rect width="880" height="200" rx="10" fill="url(#dotMatrix)" />
 
-  <!-- Scanline sweep -->
-  <g class="crt-line" opacity="0.12">
-    <rect x="0" y="0" width="880" height="15" fill="#00ff66" />
+  <!-- CRT Scanline Simulation -->
+  <g class="scan-beam" opacity="0.1">
+    <rect x="0" y="0" width="880" height="18" fill="#00ff66" />
   </g>
 
-  <!-- Arcade HUD Header -->
+  <!-- Arcade HUD Score Header -->
   <g transform="translate(25, 24)">
-    <text x="0" y="0" fill="#00ff66" class="arcade-font" filter="url(#neonP)">1UP: 013370</text>
-    <text x="170" y="0" fill="#00f0ff" class="arcade-font">HIGH_SCORE: 999990</text>
-    <text x="420" y="0" fill="#ff0055" class="arcade-font">MODE: 802.11 PACKET_HUNTER</text>
-    <text x="730" y="0" fill="#ffdd54" class="arcade-font blink-text">INSERT COIN</text>
+    <text x="0" y="0" fill="#00ff66" class="hud-text" filter="url(#neonG)">HIGH_SCORE: 133,700</text>
+    <text x="240" y="0" fill="#00f0ff" class="hud-text">SIGINT: PACKET_HUNTER</text>
+    <text x="540" y="0" fill="#ffdd54" class="hud-text">LEVEL: FORENSICS_LAB</text>
+    <text x="760" y="0" fill="#ff0055" class="hud-text">LIVES: 3</text>
   </g>
 
-  <!-- Maze Neon Blue Boundary Rails -->
-  <g fill="none" stroke="#00f0ff" stroke-width="2" filter="url(#neonP)" opacity="0.75">
-    <!-- Top & Bottom Maze Borders -->
-    <path d="M 25 45 L 855 45" />
-    <path d="M 25 180 L 855 180" />
+  <!-- Maze Walls & Glowing Neon Rails -->
+  <g fill="none" stroke-width="2" filter="url(#neonG)">
+    <!-- Outer Horizontal Tracks -->
+    <path d="M 25 46 L 855 46" stroke="#00f0ff" opacity="0.6" />
+    <path d="M 25 180 L 855 180" stroke="#00f0ff" opacity="0.6" />
 
-    <!-- Center Obstacle Islands -->
-    <rect x="100" y="65" width="80" height="15" rx="3" stroke="#7000ff" />
-    <rect x="260" y="65" width="140" height="15" rx="3" stroke="#00ff66" />
-    <rect x="480" y="65" width="140" height="15" rx="3" stroke="#00ff66" />
-    <rect x="700" y="65" width="80" height="15" rx="3" stroke="#7000ff" />
+    <!-- Neon Maze Blocks -->
+    <rect x="70" y="62" width="130" height="14" rx="4" stroke="#7000ff" />
+    <rect x="240" y="62" width="150" height="14" rx="4" stroke="#00ff66" />
+    <rect x="490" y="62" width="150" height="14" rx="4" stroke="#00ff66" />
+    <rect x="680" y="62" width="130" height="14" rx="4" stroke="#7000ff" />
 
-    <rect x="100" y="115" width="140" height="15" rx="3" stroke="#00ff66" />
-    <rect x="320" y="115" width="240" height="15" rx="3" stroke="#7000ff" />
-    <rect x="640" y="115" width="140" height="15" rx="3" stroke="#00ff66" />
+    <rect x="70" y="114" width="130" height="14" rx="4" stroke="#00ff66" />
+    <rect x="240" y="114" width="210" height="14" rx="4" stroke="#7000ff" />
+    <rect x="490" y="114" width="210" height="14" rx="4" stroke="#7000ff" />
+    <rect x="740" y="114" width="70" height="14" rx="4" stroke="#00ff66" />
   </g>
 
-  <!-- Data Energy Pellets (Eaten by Runner) -->
-  <g fill="#ffdd54" filter="url(#neonP)">
-    <!-- Top Row Pellets -->
-    <circle cx="80" cy="90" r="3.5" class="p1" />
-    <circle cx="130" cy="90" r="3.5" class="p1" />
-    <circle cx="180" cy="90" r="3.5" class="p1" />
-    <circle cx="230" cy="90" r="3.5" class="p2" />
-    <circle cx="280" cy="90" r="3.5" class="p2" />
-    <circle cx="330" cy="90" r="3.5" class="p2" />
-    <circle cx="380" cy="90" r="3.5" class="p3" />
-
-    <!-- Big Cyber Power Pellet -->
-    <circle cx="430" cy="90" r="7" fill="#00ff66" class="p3" filter="url(#strongGlow)" />
+  <!-- Track Data Pellets -->
+  <g fill="#ffdd54" filter="url(#neonG)">
+    <!-- Upper Lane Pellets -->
+    <circle cx="60" cy="90" r="3.5" class="d1" />
+    <circle cx="100" cy="90" r="3.5" class="d1" />
+    <circle cx="140" cy="90" r="3.5" class="d2" />
+    <circle cx="180" cy="90" r="3.5" class="d2" />
+    <circle cx="220" cy="90" r="3.5" class="d3" />
+    <circle cx="260" cy="90" r="3.5" class="d3" />
+    <circle cx="300" cy="90" r="3.5" class="d4" />
+    <circle cx="340" cy="90" r="3.5" class="d4" />
+    <circle cx="380" cy="90" r="3.5" class="d5" />
+    
+    <!-- Big Power Energizer Pellet at Corner -->
+    <circle cx="430" cy="90" class="power-dot d5" />
 
     <!-- Turn Column Pellets -->
-    <circle cx="430" cy="115" r="3.5" class="p3" />
-    <circle cx="430" cy="140" r="3.5" class="p4" />
+    <circle cx="430" cy="115" r="3.5" class="d6" />
+    <circle cx="430" cy="140" r="3.5" class="d6" />
 
-    <!-- Bottom Row Pellets -->
-    <circle cx="480" cy="140" r="3.5" class="p4" />
-    <circle cx="530" cy="140" r="3.5" class="p4" />
-    <circle cx="580" cy="140" r="3.5" class="p4" />
-    <circle cx="630" cy="140" r="3.5" class="p5" />
-    <circle cx="680" cy="140" r="3.5" class="p5" />
-    <circle cx="730" cy="140" r="3.5" class="p5" />
-    
-    <!-- Second Power Pellet -->
-    <circle cx="780" cy="140" r="7" fill="#ff0055" class="p5" filter="url(#strongGlow)" />
-    <circle cx="830" cy="140" r="3.5" class="p5" />
+    <!-- Lower Lane Pellets -->
+    <circle cx="475" cy="140" r="3.5" class="d7" />
+    <circle cx="515" cy="140" r="3.5" class="d7" />
+    <circle cx="555" cy="140" r="3.5" class="d8" />
+    <circle cx="595" cy="140" r="3.5" class="d8" />
+    <circle cx="635" cy="140" r="3.5" class="d9" />
+    <circle cx="675" cy="140" r="3.5" class="d9" />
+    <circle cx="715" cy="140" r="3.5" class="d10" />
+    <circle cx="755" cy="140" r="3.5" class="d10" />
+    <circle cx="795" cy="140" class="power-dot d10" />
+    <circle cx="835" cy="140" r="3.5" class="d10" />
   </g>
 
-  <!-- Dynamic Animated Pacman (Cyber Yellow / Gold) -->
-  <g class="pacman-runner">
-    <g filter="url(#strongGlow)">
-      <!-- Top Half -->
-      <path d="M 0,0 A 14,14 0 0,1 14,-14 L 0,0 Z" fill="#ffd700" class="pac-mouth-top" transform="translate(0, 0)" />
-      <!-- Bottom Half -->
-      <path d="M 0,0 A 14,14 0 0,0 14,14 L 0,0 Z" fill="#ffd700" class="pac-mouth-bot" transform="translate(0, 0)" />
-      <!-- Back Body -->
-      <path d="M 0,-14 A 14,14 0 0,0 0,14 Z" fill="#ffd700" />
-      <circle cx="-2" cy="-6" r="2" fill="#000" />
+  <!-- Authentic Pacman Actor (Flawless SVG Cutout Geometry) -->
+  <g class="pacman-actor">
+    <g filter="url(#strongG)">
+      <!-- Solid Yellow Circle Body -->
+      <circle cx="0" cy="0" r="14" fill="#FFD700" />
+      
+      <!-- Mouth Wedge (Animated ScaleY Cutout) -->
+      <polygon points="0,0 16,-10 16,10" fill="#080d16" class="mouth" />
+      
+      <!-- Pacman Eye -->
+      <circle cx="1" cy="-7" r="2.2" fill="#020408" />
     </g>
   </g>
 
-  <!-- Dynamic Animated Cyber Ghost Chaser (Blinky / Red-Pink) -->
-  <g class="ghost-runner">
-    <g class="ghost-body" filter="url(#strongGlow)">
-      <!-- Ghost Dome & Body -->
-      <path d="M -13,4 A 13,13 0 0,1 13,4 L 13,14 L 7,10 L 0,14 L -7,10 L -13,14 Z" fill="url(#ghostGrad)" />
-      <!-- Ghost Eyes -->
-      <circle cx="-4" cy="2" r="3.5" fill="#fff" />
-      <circle cx="4" cy="2" r="3.5" fill="#fff" />
-      <!-- Blue Pupils looking right -->
-      <circle cx="-2.5" cy="2" r="1.8" fill="#00f0ff" />
-      <circle cx="5.5" cy="2" r="1.8" fill="#00f0ff" />
+  <!-- Authentic Retro Ghost Sprite Actor (Blinky / Inky) -->
+  <g class="ghost-actor">
+    <g class="ghost-motion" filter="url(#strongG)">
+      <!-- Ghost Head & Tentacle Body (Single Perfect Smooth Path) -->
+      <path class="ghost-color" d="M -12,0 A 12,12 0 0,1 12,0 L 12,11 L 8,8 L 4,11 L 0,8 L -4,11 L -8,8 L -12,11 Z" />
+      
+      <!-- Sclera Eyes -->
+      <ellipse cx="-4" cy="-2" rx="3.5" ry="4.5" fill="#ffffff" />
+      <ellipse cx="4" cy="-2" rx="3.5" ry="4.5" fill="#ffffff" />
+      
+      <!-- Pupils Tracking Right -->
+      <circle cx="-2.5" cy="-2" r="2" fill="#00f0ff" />
+      <circle cx="5.5" cy="-2" r="2" fill="#00f0ff" />
     </g>
   </g>
 
-  <!-- Bottom Cyber Legend -->
+  <!-- Bottom Console Status Bar -->
   <g transform="translate(25, 192)">
-    <text x="0" y="0" fill="#8b949e" class="arcade-font" font-size="9.5px">LIVES: ❤ ❤ ❤  |  LEVEL: FORENSIC_LAB_01  |  ESP32_SNIFFER: ACTIVE  |  PACKETS: CAPTURED</text>
+    <text x="0" y="0" fill="#8b949e" class="hud-text" font-size="9.5px">RAW_FRAME: 802.11 BEACON  |  MAC: DE:AD:BE:EF:CA:FE  |  ESP32_SNIFFER: ACTIVE</text>
   </g>
 </svg>
