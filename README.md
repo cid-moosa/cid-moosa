@@ -118,7 +118,7 @@
 ### 🛠️ Cyber Forensics & Investigation Arsenal
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=kali,linux,c,cpp,python,kotlin,java,bash,powershell,docker,mysql,arduino,raspberrypi,android,blender,git,github,vscode,idea&perline=10" alt="Forensics & Tech Icons" />
+  <img src="https://skillicons.dev/icons?i=kali,linux,c,cpp,python,kotlin,java,bash,powershell,docker,mysql,arduino,raspberrypi,androidstudio,blender,git,github,vscode,idea,flask&perline=10" alt="Forensics & Tech Icons" />
 </div>
 
 <br/>
