@@ -41,6 +41,14 @@
 
 <br/>
 
+### 🕹️ Cyber Forensics SIGINT Hunter (Live Retro Arcade Simulation)
+
+<div align="center">
+  <img src="./assets/cyber-grid-hunter.svg" width="100%" alt="Cyber Forensics Arcade Game" />
+</div>
+
+<br/>
+
 <!-- Real-Time Signal & Packet Spectrum Analyzer Animation -->
 <div align="center">
   <img src="./assets/cyber-spectrum.svg" width="100%" alt="Forensics Spectrum Analyzer" />
