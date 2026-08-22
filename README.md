@@ -194,14 +194,8 @@
 
 <br/>
 
-<div align="center">
-  <h3>🏆 Security &amp; Developer Trophies</h3>
-  <img src="https://github-profile-trophy.vercel.app/?username=cid-moosa&theme=onedark&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Trophies" />
-</div>
-
-<br/>
-
 <!-- Native Animated Cyber Forensics Footer -->
 <div align="center">
   <img src="./assets/footer-cyber.svg" width="100%" alt="Footer Banner" />
 </div>
+
