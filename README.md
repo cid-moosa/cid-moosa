@@ -1,16 +1,16 @@
 <div align="center">
 
-<!-- Animated Header Wave Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,24,30&height=220&section=header&text=ARUN.P.S%20%5Bcid-moosa%5D&fontSize=42&fontAlignY=36&animation=twinkling&desc=HARDWARE%20HACKER%20%E2%80%A2%20SYSTEMS%20ARCHITECT%20%E2%80%A2%20RF%20%26%20EMBEDDED&descAlignY=58&descAlign=50&stroke=00ff66&strokeWidth=1" width="100%" alt="Header Banner" />
+<!-- High-Tech Cyberpunk Animated Header Banner -->
+<img src="./assets/header-cyber.svg" width="100%" alt="ARUN.P.S // CID-MOOSA" />
 
 <!-- Dynamic Animated Terminal Typing SVG -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1000&color=00FF66&center=true&vCenter=true&width=680&lines=Initializing+Hardware+Interface...;ESP32+Wi-Fi+Frame+Injection+%26+Auditing;Reverse+Engineering+USB+OTG+%26+IR+Protocols;Native+Android+Compose+%2B+Low-Level+P2P+Audio;Crafting+Fast+Terminal+TUIs+%26+Kernel+Installers;Always+Building.+Always+Breaking.+Always+Optimizing." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&pause=1000&color=00FF66&center=true&vCenter=true&width=700&lines=%24+init_hardware_telemetry+--mode%3Dstealth;%24+esp32_firmware_flash+--target%3Dauditing_agent;%24+reverse_eng_usb_otg+--device%3Dir_blaster;%24+wardrive_android_compose+--map%3Dlive;%24+always_building.+always_breaking.+always_optimizing." alt="Typing Terminal" />
 </a>
 
 <br/>
 
-<!-- Live Connect & Counter Badges -->
+<!-- Connect & Status Badges -->
 <p align="center">
   <a href="https://discord.gg/cidm00sa"><img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://instagram.com/cidmoosa.onion"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
@@ -20,7 +20,7 @@
 
 </div>
 
----
+<img src="./assets/cyber-radar.svg" width="100%" alt="Divider" />
 
 ### 🛰️ System Log & Bio
 ```text
@@ -32,13 +32,13 @@
 
 ---
 
-### ⚡ Animated Contribution Snake Stream
+### ⚡ Live GitHub Contribution Snake Stream
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/cid-moosa/cid-moosa/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
 </div>
 
----
+<img src="./assets/cyber-radar.svg" width="100%" alt="Divider" />
 
 ### 🚀 Featured Creations & Flagship Projects
 
@@ -105,7 +105,7 @@
   </tr>
 </table>
 
----
+<img src="./assets/cyber-radar.svg" width="100%" alt="Divider" />
 
 ### 🛠️ Hardware Lab & Tech Stack
 
@@ -150,7 +150,7 @@
 ![Adobe Illustrator](https://img.shields.io/badge/Adobe%20Illustrator-%23FF9A00.svg?style=for-the-badge&logo=adobe%20illustrator&logoColor=white)
 </details>
 
----
+<img src="./assets/cyber-radar.svg" width="100%" alt="Divider" />
 
 ### 📈 Dynamic Activity Radar & Stats
 
@@ -178,11 +178,9 @@
   <img src="https://github-profile-trophy.vercel.app/?username=cid-moosa&theme=onedark&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Trophies" />
 </div>
 
----
+<br/>
 
+<!-- Native Animated Cyberpunk Footer -->
 <div align="center">
-<!-- Animated Footer Wave Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,24,30&height=120&section=footer" width="100%" alt="Footer Banner" />
-
-<sub>⚡ System crafted by <b>ARUN.P.S</b> (`cid-moosa`) ⚡</sub>
+  <img src="./assets/footer-cyber.svg" width="100%" alt="Footer Banner" />
 </div>

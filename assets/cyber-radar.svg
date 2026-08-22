@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 80" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradDiv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff66" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00ff66" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="1" />
+      <stop offset="75%" stop-color="#7000ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#7000ff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="glowD">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    @keyframes pulseNode {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.4); opacity: 1; filter: drop-shadow(0 0 8px #00ff66); }
+    }
+    @keyframes sweepLine {
+      0% { transform: translateX(-900px); }
+      100% { transform: translateX(900px); }
+    }
+    .node-pulse {
+      transform-origin: center;
+      animation: pulseNode 2.5s infinite ease-in-out;
+    }
+    .sweep {
+      animation: sweepLine 3s infinite linear;
+    }
+    .radar-text {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 10px;
+      letter-spacing: 4px;
+      fill: #00ff66;
+    }
+  </style>
+
+  <rect width="900" height="80" fill="transparent" />
+
+  <!-- Center Hexagon / Target Node -->
+  <g transform="translate(450, 40)">
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.4" />
+    <circle cx="0" cy="0" r="8" fill="#00ff66" class="node-pulse" filter="url(#glowD)" />
+    <text y="-22" text-anchor="middle" class="radar-text">[ RF • FREQUENCY SPECTRUM • HARDWARE TELEMETRY ]</text>
+  </g>
+
+  <!-- Left & Right Sweeping Laser Lines -->
+  <line x1="40" y1="40" x2="415" y2="40" stroke="url(#gradDiv)" stroke-width="2" filter="url(#glowD)" />
+  <line x1="485" y1="40" x2="860" y2="40" stroke="url(#gradDiv)" stroke-width="2" filter="url(#glowD)" />
+
+  <!-- Circuit nodes -->
+  <circle cx="40" cy="40" r="3" fill="#00ff66" />
+  <circle cx="200" cy="40" r="2.5" fill="#00f0ff" />
+  <circle cx="700" cy="40" r="2.5" fill="#00f0ff" />
+  <circle cx="860" cy="40" r="3" fill="#7000ff" />
+</svg>
