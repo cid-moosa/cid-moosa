@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" width="100%" height="100%">
   <defs>
-    <!-- Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080b10" />
-      <stop offset="50%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#05080c" />
+      <stop offset="0%" stop-color="#04070b" />
+      <stop offset="50%" stop-color="#090d14" />
+      <stop offset="100%" stop-color="#020408" />
     </linearGradient>
 
-    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="cyberNeon" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00ff66" />
-      <stop offset="50%" stop-color="#00f0ff" />
+      <stop offset="45%" stop-color="#00f0ff" />
+      <stop offset="85%" stop-color="#ff0055" />
       <stop offset="100%" stop-color="#7000ff" />
     </linearGradient>
 
     <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="transparent" />
-      <stop offset="50%" stop-color="#00ff66" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#00ff66" stop-opacity="0.18" />
       <stop offset="100%" stop-color="transparent" />
     </linearGradient>
 
@@ -35,23 +35,23 @@
       </feMerge>
     </filter>
 
-    <!-- Grid Pattern -->
-    <pattern id="cyberGrid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00ff66" stroke-width="0.5" stroke-opacity="0.08" />
+    <pattern id="forensicGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#00ff66" stroke-width="0.5" stroke-opacity="0.08" />
+      <circle cx="25" cy="25" r="0.8" fill="#00f0ff" fill-opacity="0.25" />
     </pattern>
   </defs>
 
   <style>
     @keyframes pulseGlow {
-      0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 8px rgba(0,255,102,0.6)); }
-      50% { opacity: 1; filter: drop-shadow(0 0 16px rgba(0,240,255,0.9)); }
+      0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 8px rgba(0,255,102,0.6)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 18px rgba(0,240,255,0.95)); }
     }
     @keyframes scanline {
       0% { transform: translateY(-100px); }
-      100% { transform: translateY(260px); }
+      100% { transform: translateY(270px); }
     }
     @keyframes circuitFlow {
-      0% { stroke-dashoffset: 600; }
+      0% { stroke-dashoffset: 800; }
       100% { stroke-dashoffset: 0; }
     }
     @keyframes blink {
@@ -65,91 +65,91 @@
     .title-text {
       font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', monospace;
       font-weight: 900;
-      font-size: 42px;
-      letter-spacing: 4px;
-      fill: url(#neonGreen);
+      font-size: 38px;
+      letter-spacing: 3px;
+      fill: url(#cyberNeon);
       animation: pulseGlow 4s ease-in-out infinite;
     }
     .subtitle-text {
       font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 3px;
+      font-weight: 700;
+      font-size: 13.5px;
+      letter-spacing: 2.5px;
       fill: #00ff66;
     }
     .tag-badge {
       font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
-      font-size: 11px;
+      font-size: 10.5px;
       fill: #8b949e;
       letter-spacing: 1.5px;
     }
     .circuit-line {
-      stroke-dasharray: 100 200;
-      animation: circuitFlow 8s linear infinite;
+      stroke-dasharray: 120 220;
+      animation: circuitFlow 7s linear infinite;
     }
     .status-dot {
-      animation: blink 1.5s infinite;
+      animation: blink 1.2s infinite;
     }
     .scanner {
-      animation: scanline 4s linear infinite;
+      animation: scanline 3.5s linear infinite;
     }
     .wave {
-      animation: waveMove 10s linear infinite;
+      animation: waveMove 9s linear infinite;
     }
   </style>
 
   <!-- Background Base -->
-  <rect width="900" height="240" rx="14" fill="url(#bgGrad)" stroke="#30363d" stroke-width="1.5" />
+  <rect width="900" height="250" rx="14" fill="url(#bgGrad)" stroke="#30363d" stroke-width="1.5" />
   
-  <!-- Cyber Grid -->
-  <rect width="900" height="240" rx="14" fill="url(#cyberGrid)" />
+  <!-- Cyber Forensic Grid -->
+  <rect width="900" height="250" rx="14" fill="url(#forensicGrid)" />
 
   <!-- Animated Scanline Bar -->
   <g class="scanner">
-    <rect x="0" y="0" width="900" height="40" fill="url(#scanGrad)" />
+    <rect x="0" y="0" width="900" height="45" fill="url(#scanGrad)" />
   </g>
 
-  <!-- Top Corner Accents -->
-  <path d="M 14 40 L 14 14 L 40 14" fill="none" stroke="#00ff66" stroke-width="2.5" filter="url(#subtleGlow)" />
-  <path d="M 860 14 L 886 14 L 886 40" fill="none" stroke="#00f0ff" stroke-width="2.5" filter="url(#subtleGlow)" />
-  <path d="M 14 200 L 14 226 L 40 226" fill="none" stroke="#00f0ff" stroke-width="2.5" filter="url(#subtleGlow)" />
-  <path d="M 860 226 L 886 226 L 886 200" fill="none" stroke="#00ff66" stroke-width="2.5" filter="url(#subtleGlow)" />
+  <!-- Corner Security Brackets -->
+  <path d="M 14 45 L 14 14 L 45 14" fill="none" stroke="#00ff66" stroke-width="2.5" filter="url(#subtleGlow)" />
+  <path d="M 855 14 L 886 14 L 886 45" fill="none" stroke="#00f0ff" stroke-width="2.5" filter="url(#subtleGlow)" />
+  <path d="M 14 205 L 14 236 L 45 236" fill="none" stroke="#ff0055" stroke-width="2.5" filter="url(#subtleGlow)" />
+  <path d="M 855 236 L 886 236 L 886 205" fill="none" stroke="#00ff66" stroke-width="2.5" filter="url(#subtleGlow)" />
 
-  <!-- Glowing Circuit Lines -->
-  <path class="circuit-line" d="M 40 14 L 300 14 L 330 35 L 570 35 L 600 14 L 860 14" fill="none" stroke="#00ff66" stroke-width="1.5" opacity="0.6" />
-  <path class="circuit-line" d="M 40 226 L 250 226 L 280 205 L 620 205 L 650 226 L 860 226" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.6" />
+  <!-- Flowing Circuit Lines -->
+  <path class="circuit-line" d="M 45 14 L 280 14 L 310 32 L 590 32 L 620 14 L 855 14" fill="none" stroke="#00ff66" stroke-width="1.5" opacity="0.7" />
+  <path class="circuit-line" d="M 45 236 L 240 236 L 270 215 L 630 215 L 660 236 L 855 236" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.7" />
 
-  <!-- Status Bar Top Left -->
+  <!-- Forensic Terminal Header Left -->
   <g transform="translate(45, 38)">
     <circle cx="6" cy="6" r="4" fill="#00ff66" class="status-dot" filter="url(#glow)" />
-    <text x="18" y="10" class="tag-badge">SYSTEM: ONLINE // ROOT ACCESS GRANTED</text>
+    <text x="18" y="10" class="tag-badge" font-weight="700">CASE FILE: #DF-2026 // CYBER FORENSICS LAB</text>
   </g>
 
-  <!-- Status Bar Top Right -->
-  <g transform="translate(710, 38)">
-    <rect x="0" y="0" width="135" height="20" rx="4" fill="#00ff66" fill-opacity="0.1" stroke="#00ff66" stroke-width="1" />
-    <text x="10" y="14" class="tag-badge" fill="#00ff66" font-weight="700">ESP32 • OTG • RF</text>
+  <!-- Target Classification Badge Right -->
+  <g transform="translate(680, 38)">
+    <rect x="0" y="0" width="175" height="20" rx="4" fill="#ff0055" fill-opacity="0.12" stroke="#ff0055" stroke-width="1" />
+    <text x="12" y="14" class="tag-badge" fill="#ff0055" font-weight="700">17Y FORENSICS SCHOLAR</text>
   </g>
 
   <!-- Main Title -->
-  <g transform="translate(450, 115)" text-anchor="middle">
+  <g transform="translate(450, 118)" text-anchor="middle">
     <text class="title-text" filter="url(#glow)">ARUN.P.S // CID-MOOSA</text>
   </g>
 
-  <!-- Subtitle with Badges -->
-  <g transform="translate(450, 155)" text-anchor="middle">
-    <text class="subtitle-text">⚡ HARDWARE HACKER • SYSTEMS ARCHITECT • EMBEDDED &amp; ANDROID ⚡</text>
+  <!-- Cyber Forensics Subtitle -->
+  <g transform="translate(450, 158)" text-anchor="middle">
+    <text class="subtitle-text">🔍 CYBER FORENSICS • HARDWARE SECURITY • RF &amp; SYSTEMS AUDITOR 🔍</text>
   </g>
 
-  <!-- Tech Breadcrumb -->
-  <g transform="translate(450, 185)" text-anchor="middle">
-    <rect x="-240" y="-14" width="480" height="24" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <text y="3" class="tag-badge" fill="#58a6ff">[ ESP32 FIRMWARE ]  •  [ 802.11 INJECTION ]  •  [ REVERSE ENG ]  •  [ JETPACK COMPOSE ]</text>
+  <!-- Forensics Focus Breadcrumbs -->
+  <g transform="translate(450, 192)" text-anchor="middle">
+    <rect x="-290" y="-14" width="580" height="25" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <text y="4" class="tag-badge" fill="#58a6ff">[ MEMORY &amp; FIRMWARE DUMPS ]  •  [ 802.11 INJECTION ]  •  [ USB OTG FORENSICS ]  •  [ REVERSE ENG ]</text>
   </g>
 
-  <!-- Bottom Animated Wave Stream -->
-  <g opacity="0.35">
-    <path class="wave" d="M 0 230 Q 112.5 215, 225 230 T 450 230 T 675 230 T 900 230 T 1125 230 T 1350 230" fill="none" stroke="#00ff66" stroke-width="2" />
-    <path class="wave" d="M 0 234 Q 112.5 220, 225 234 T 450 234 T 675 234 T 900 234 T 1125 234 T 1350 234" fill="none" stroke="#00f0ff" stroke-width="1.5" />
+  <!-- Bottom Oscilloscope / Signal Waveform Stream -->
+  <g opacity="0.4">
+    <path class="wave" d="M 0 240 Q 112.5 224, 225 240 T 450 240 T 675 240 T 900 240 T 1125 240 T 1350 240" fill="none" stroke="#00ff66" stroke-width="2" />
+    <path class="wave" d="M 0 244 Q 112.5 228, 225 244 T 450 244 T 675 244 T 900 244 T 1125 244 T 1350 244" fill="none" stroke="#ff0055" stroke-width="1.5" />
   </g>
 </svg>
