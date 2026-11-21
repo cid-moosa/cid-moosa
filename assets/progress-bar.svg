@@ -34,7 +34,7 @@
     <clipPath id="consumedClip">
       <rect x="60.0" y="74.0" width="0" height="22.0" rx="11">
         <animate attributeName="width"
-          values="0; 555.4; 555.4; 0"
+          values="0; 558.5; 558.5; 0"
           keyTimes="0; 0.72; 0.88; 1"
           dur="5.0s" repeatCount="indefinite"
           calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
@@ -45,12 +45,12 @@
     <clipPath id="pelletClip">
       <rect x="60.0" y="64.0" width="810.0" height="42.0">
         <animate attributeName="x"
-          values="60.0; 615.4; 615.4; 60.0"
+          values="60.0; 618.5; 618.5; 60.0"
           keyTimes="0; 0.72; 0.88; 1"
           dur="5.0s" repeatCount="indefinite"
           calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
         <animate attributeName="width"
-          values="810.0; 254.6; 254.6; 810.0"
+          values="810.0; 251.5; 251.5; 810.0"
           keyTimes="0; 0.72; 0.88; 1"
           dur="5.0s" repeatCount="indefinite"
           calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
@@ -79,7 +79,7 @@
   </circle>
   <text x="30" y="18" class="mono-title">DYNAMIC INVESTIGATION TELEMETRY // CONTRIBUTION PROGRESS</text>
   <text x="882" y="18" text-anchor="end" class="mono-telemetry">
-    TARGET: <tspan fill="#e3b341">250 COMMITS</tspan> | RECORD: <tspan fill="#3fb950">178</tspan> | QUOTA: <tspan fill="#38bdf8">71.2%</tspan> | STATUS: <tspan fill="#00ff66">CONSUMING</tspan>
+    TARGET: <tspan fill="#e3b341">250 COMMITS</tspan> | RECORD: <tspan fill="#3fb950">179</tspan> | QUOTA: <tspan fill="#38bdf8">71.6%</tspan> | STATUS: <tspan fill="#00ff66">CONSUMING</tspan>
   </text>
 
   <!-- Telemetry Sub-row Readout Badges -->
@@ -87,12 +87,12 @@
     <!-- Badge 1: Activity -->
     <rect x="0" y="0" width="180" height="22" rx="4" fill="#161b22" stroke="#21262d" stroke-width="0.8" />
     <text x="10" y="15" class="stat-label">ANNUAL ACTIVITY:</text>
-    <text x="110" y="15" class="stat-val" fill="#3fb950">178 <tspan fill="#7d8590" font-weight="400">/ 250</tspan></text>
+    <text x="110" y="15" class="stat-val" fill="#3fb950">179 <tspan fill="#7d8590" font-weight="400">/ 250</tspan></text>
 
     <!-- Badge 2: Goal Fill -->
     <rect x="195" y="0" width="175" height="22" rx="4" fill="#161b22" stroke="#21262d" stroke-width="0.8" />
     <text x="205" y="15" class="stat-label">QUOTA FILL:</text>
-    <text x="275" y="15" class="stat-val" fill="#00ff66">71.2% <tspan fill="#7d8590" font-weight="400">(72 REM)</tspan></text>
+    <text x="275" y="15" class="stat-val" fill="#00ff66">71.6% <tspan fill="#7d8590" font-weight="400">(71 REM)</tspan></text>
 
     <!-- Badge 3: Clearance -->
     <rect x="385" y="0" width="230" height="22" rx="4" fill="#161b22" stroke="#21262d" stroke-width="0.8" />
@@ -287,21 +287,21 @@
     <!-- Frontier Milestone Beacon -->
     <g>
       <!-- Vertical Beacon Marker -->
-      <line x1="615.4" y1="70.0" x2="615.4" y2="100.0" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="2,2" opacity="0.8" />
+      <line x1="618.5" y1="70.0" x2="618.5" y2="100.0" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="2,2" opacity="0.8" />
       <!-- Milestone Chevron Pointer -->
-      <polygon points="611.9,68.0 618.9,68.0 615.4,73.0" fill="#38bdf8" />
+      <polygon points="615.0,68.0 622.0,68.0 618.5,73.0" fill="#38bdf8" />
       <!-- Frontier Rotating Radar Ring -->
-      <circle cx="615.4" cy="85.0" r="9" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2,2" opacity="0.7">
-        <animateTransform attributeName="transform" type="rotate" from="0 615.4 85.0" to="360 615.4 85.0" dur="4s" repeatCount="indefinite" />
+      <circle cx="618.5" cy="85.0" r="9" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2,2" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate" from="0 618.5 85.0" to="360 618.5 85.0" dur="4s" repeatCount="indefinite" />
       </circle>
       <!-- Milestone Arrival Shockwave -->
-      <circle cx="615.4" cy="85.0" r="2" fill="none" stroke="#58a6ff" stroke-width="1.6" opacity="0">
+      <circle cx="618.5" cy="85.0" r="2" fill="none" stroke="#58a6ff" stroke-width="1.6" opacity="0">
         <animate attributeName="r" values="2; 2; 16; 22" keyTimes="0; 0.72; 0.770; 1" dur="5.0s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="0; 0; 0.9; 0" keyTimes="0; 0.72; 0.760; 1" dur="5.0s" repeatCount="indefinite" />
       </circle>
       <!-- Core Frontier Node -->
-      <circle cx="615.4" cy="85.0" r="3" fill="#38bdf8" />
-      <circle cx="615.4" cy="85.0" r="1.2" fill="#ffffff" />
+      <circle cx="618.5" cy="85.0" r="3" fill="#38bdf8" />
+      <circle cx="618.5" cy="85.0" r="1.2" fill="#ffffff" />
     </g>
   </g>
 
@@ -317,7 +317,7 @@
   <!-- ANIMATED CYBER-SNAKE EATER -->
   <g transform="translate(60.0, 85.0)">
     <animateTransform attributeName="transform" type="translate"
-      values="60.0,85.0; 615.4,85.0; 615.4,85.0; 60.0,85.0"
+      values="60.0,85.0; 618.5,85.0; 618.5,85.0; 60.0,85.0"
       keyTimes="0; 0.72; 0.88; 1"
       dur="5.0s" repeatCount="indefinite"
       calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
