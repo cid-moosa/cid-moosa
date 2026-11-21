@@ -1,32 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 12" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 16" width="100%" height="100%">
   <defs>
-    <linearGradient id="laserLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00ff66" stop-opacity="0" />
-      <stop offset="20%" stop-color="#00ff66" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#00f0ff" stop-opacity="1" />
-      <stop offset="80%" stop-color="#ff0055" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#7000ff" stop-opacity="0" />
+    <!-- Left Hairline Gradient: Fades from transparent at margin to subtle slate-emerald at center -->
+    <linearGradient id="divGradLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30363d" stop-opacity="0" />
+      <stop offset="70%" stop-color="#30363d" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#3fb950" stop-opacity="0.8" />
     </linearGradient>
-    <filter id="laserGlow" x="-20%" y="-100%" width="140%" height="300%">
-      <feGaussianBlur stdDeviation="2" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+
+    <!-- Right Hairline Gradient: Fades from subtle slate-blue at center to transparent at margin -->
+    <linearGradient id="divGradRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#30363d" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#30363d" stop-opacity="0" />
+    </linearGradient>
   </defs>
+
   <style>
-    @keyframes sweepLaser {
-      0% { transform: translateX(-300px); }
-      100% { transform: translateX(1000px); }
+    @keyframes nodePulse {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.2); opacity: 1; }
     }
-    .laser-spark {
-      animation: sweepLaser 3.5s ease-in-out infinite;
+    @keyframes lineGlow {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+    .node-diamond {
+      transform-origin: 450px 8px;
+      animation: nodePulse 3s ease-in-out infinite;
+    }
+    .hairline-pulse {
+      animation: lineGlow 3s ease-in-out infinite;
     }
   </style>
-  <rect width="900" height="12" fill="transparent" />
-  <line x1="20" y1="6" x2="880" y2="6" stroke="url(#laserLine)" stroke-width="1.5" />
-  <g class="laser-spark">
-    <line x1="0" y1="6" x2="140" y2="6" stroke="#ffffff" stroke-width="2.2" filter="url(#laserGlow)" />
+
+  <!-- Left Flanking Hairline -->
+  <line x1="60" y1="8" x2="432" y2="8" stroke="url(#divGradLeft)" stroke-width="1" class="hairline-pulse" />
+
+  <!-- Left Accent Dot -->
+  <circle cx="438" cy="8" r="1.2" fill="#3fb950" fill-opacity="0.75" />
+
+  <!-- Central Precision Engineering Diamond Node -->
+  <g class="node-diamond">
+    <polygon points="450,3.5 454.5,8 450,12.5 445.5,8" fill="#3fb950" fill-opacity="0.95" />
+    <circle cx="450" cy="8" r="1" fill="#0d1117" />
   </g>
+
+  <!-- Right Accent Dot -->
+  <circle cx="462" cy="8" r="1.2" fill="#58a6ff" fill-opacity="0.75" />
+
+  <!-- Right Flanking Hairline -->
+  <line x1="468" y1="8" x2="840" y2="8" stroke="url(#divGradRight)" stroke-width="1" class="hairline-pulse" />
 </svg>

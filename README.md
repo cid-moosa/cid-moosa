@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- High-Tech Cyber Forensics Animated Header Banner -->
+<!-- Precision Digital Forensics & Hardware Engineering Header Banner -->
 <img src="./assets/header-cyber.svg" width="100%" alt="ARUN.P.S // CID-MOOSA" />
 
 <!-- Dynamic Animated Cyber Forensics Terminal Typing SVG -->
@@ -33,7 +33,13 @@
 
 ---
 
-### ⚡ Live Investigation Telemetry (Contribution Snake)
+### ⚡ Live Investigation Telemetry & Contribution Progress
+
+<div align="center">
+  <img src="./assets/progress-bar.svg" width="100%" alt="Dynamic Contribution Progress Animation" />
+</div>
+
+<br/>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/cid-moosa/cid-moosa/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
@@ -41,17 +47,17 @@
 
 <br/>
 
-### 🕹️ Cyber Forensics SIGINT Hunter (Live Retro Arcade Simulation)
+### 🔬 Hardware Logic & Signal Protocol Analyzer
 
 <div align="center">
-  <img src="./assets/cyber-grid-hunter.svg" width="100%" alt="Cyber Forensics Arcade Game" />
+  <img src="./assets/cyber-grid-hunter.svg" width="100%" alt="Hardware Logic Analyzer & Protocol Timing Bus" />
 </div>
 
 <br/>
 
-<!-- Real-Time Signal & Packet Spectrum Analyzer Animation -->
+<!-- Precision RF Spectrum & Signal Telemetry Console -->
 <div align="center">
-  <img src="./assets/cyber-spectrum.svg" width="100%" alt="Forensics Spectrum Analyzer" />
+  <img src="./assets/cyber-spectrum.svg" width="100%" alt="RF Spectrum & Signal Telemetry Console" />
 </div>
 
 <img src="./assets/cyber-divider.svg" width="100%" alt="Divider" />
@@ -194,7 +200,7 @@
 
 <br/>
 
-<!-- Native Animated Cyber Forensics Footer -->
+<!-- Precision Engineering Signature Footer -->
 <div align="center">
   <img src="./assets/footer-cyber.svg" width="100%" alt="Footer Banner" />
 </div>

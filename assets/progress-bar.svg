@@ -1,0 +1,392 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 138" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e14" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#080c10" />
+    </linearGradient>
+    <linearGradient id="chromeBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#0f141a" />
+    </linearGradient>
+    <linearGradient id="trackBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080b0f" />
+      <stop offset="100%" stop-color="#121820" />
+    </linearGradient>
+
+    <!-- Glowing Conduits & Skin -->
+    <linearGradient id="conduitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#006d32" />
+      <stop offset="35%" stop-color="#26a641" />
+      <stop offset="75%" stop-color="#39d353" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="snakeSkin" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14532d" />
+      <stop offset="35%" stop-color="#16a34a" />
+      <stop offset="75%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#4ade80" />
+    </linearGradient>
+
+    <!-- Dynamic Eating Clip Paths -->
+    <!-- 1. consumedClip: expands from track_x to frontier_x behind the snake -->
+    <clipPath id="consumedClip">
+      <rect x="60.0" y="74.0" width="0" height="22.0" rx="11">
+        <animate attributeName="width"
+          values="0; 555.4; 555.4; 0"
+          keyTimes="0; 0.72; 0.88; 1"
+          dur="5.0s" repeatCount="indefinite"
+          calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+      </rect>
+    </clipPath>
+
+    <!-- 2. pelletClip: shifts its left edge rightward as snake mouth consumes pellets -->
+    <clipPath id="pelletClip">
+      <rect x="60.0" y="64.0" width="810.0" height="42.0">
+        <animate attributeName="x"
+          values="60.0; 615.4; 615.4; 60.0"
+          keyTimes="0; 0.72; 0.88; 1"
+          dur="5.0s" repeatCount="indefinite"
+          calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+        <animate attributeName="width"
+          values="810.0; 254.6; 254.6; 810.0"
+          keyTimes="0; 0.72; 0.88; 1"
+          dur="5.0s" repeatCount="indefinite"
+          calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <style>
+    .mono-title { font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; fill: #f0f6fc; }
+    .mono-telemetry { font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 9px; letter-spacing: 0.8px; fill: #7d8590; }
+    .stat-label { font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 8px; font-weight: 600; letter-spacing: 0.7px; fill: #8b949e; }
+    .stat-val { font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 9.5px; font-weight: 700; letter-spacing: 0.8px; fill: #f0f6fc; }
+    .scale-label { font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace; font-size: 8px; font-weight: 500; fill: #7d8590; }
+  </style>
+
+  <!-- Container Base Card -->
+  <rect width="900" height="138" rx="8" fill="url(#cardBg)" stroke="#21262d" stroke-width="1" />
+
+  <!-- Terminal Chrome Header Bar -->
+  <rect width="900" height="28" rx="8" fill="url(#chromeBg)" />
+  <rect y="20" width="900" height="8" fill="url(#chromeBg)" />
+  <line x1="0" y1="28" x2="900" y2="28" stroke="#21262d" stroke-width="1" />
+
+  <circle cx="18" cy="14" r="3.5" fill="#3fb950">
+    <animate attributeName="opacity" values="1; 0.35; 1" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <text x="30" y="18" class="mono-title">DYNAMIC INVESTIGATION TELEMETRY // CONTRIBUTION PROGRESS</text>
+  <text x="882" y="18" text-anchor="end" class="mono-telemetry">
+    TARGET: <tspan fill="#e3b341">250 COMMITS</tspan> | RECORD: <tspan fill="#3fb950">178</tspan> | QUOTA: <tspan fill="#38bdf8">71.2%</tspan> | STATUS: <tspan fill="#00ff66">CONSUMING</tspan>
+  </text>
+
+  <!-- Telemetry Sub-row Readout Badges -->
+  <g transform="translate(60, 36)">
+    <!-- Badge 1: Activity -->
+    <rect x="0" y="0" width="180" height="22" rx="4" fill="#161b22" stroke="#21262d" stroke-width="0.8" />
+    <text x="10" y="15" class="stat-label">ANNUAL ACTIVITY:</text>
+    <text x="110" y="15" class="stat-val" fill="#3fb950">178 <tspan fill="#7d8590" font-weight="400">/ 250</tspan></text>
+
+    <!-- Badge 2: Goal Fill -->
+    <rect x="195" y="0" width="175" height="22" rx="4" fill="#161b22" stroke="#21262d" stroke-width="0.8" />
+    <text x="205" y="15" class="stat-label">QUOTA FILL:</text>
+    <text x="275" y="15" class="stat-val" fill="#00ff66">71.2% <tspan fill="#7d8590" font-weight="400">(72 REM)</tspan></text>
+
+    <!-- Badge 3: Clearance -->
+    <rect x="385" y="0" width="230" height="22" rx="4" fill="#161b22" stroke="#21262d" stroke-width="0.8" />
+    <text x="395" y="15" class="stat-label">CLEARANCE:</text>
+    <text x="470" y="15" class="stat-val" fill="#3fb950">LVL 4 // FORENSICS SPECIALIST</text>
+
+    <!-- Badge 4: Chomp Cadence -->
+    <rect x="630" y="0" width="150" height="22" rx="4" fill="#161b22" stroke="#21262d" stroke-width="0.8" />
+    <text x="640" y="15" class="stat-label">CADENCE:</text>
+    <text x="705" y="15" class="stat-val" fill="#38bdf8">4.0 HZ // SMIL</text>
+  </g>
+
+  <!-- PROGRESS TRACK CONDUIT -->
+  <g>
+    <!-- Base Recessed Track -->
+    <rect x="60.0" y="74.0" width="780.0" height="22.0" rx="11" fill="url(#trackBg)" stroke="#21262d" stroke-width="1.2" />
+
+    <!-- Quarter Grid Lines -->
+    <g stroke="#1b222c" stroke-width="1" stroke-dasharray="2,3">
+      <line x1="255.0" y1="74.0" x2="255.0" y2="96.0" />
+      <line x1="450.0" y1="74.0" x2="450.0" y2="96.0" />
+      <line x1="645.0" y1="74.0" x2="645.0" y2="96.0" />
+    </g>
+
+    <!-- Center Track Circuit Line -->
+    <line x1="68.0" y1="85.0" x2="832.0" y2="85.0" stroke="#21262d" stroke-width="1" stroke-dasharray="3,6" />
+
+    <!-- Consumed Energy Conduit (clipped by consumedClip) -->
+    <g clip-path="url(#consumedClip)">
+      <rect x="60.0" y="74.0" width="780.0" height="22.0" rx="11" fill="url(#conduitGrad)" opacity="0.9" />
+      <line x1="60.0" y1="85.0" x2="840.0" y2="85.0" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="4,8" opacity="0.6" />
+    </g>
+
+    <!-- Locked Future Pellets (outside eaten frontier) -->
+      <g>
+        <circle cx="629.2" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="629.2" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="650.3" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="650.3" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="671.4" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="671.4" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="692.4" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="692.4" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="713.5" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="713.5" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="734.6" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="734.6" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="755.7" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="755.7" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="776.8" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="776.8" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="797.8" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="797.8" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="818.9" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="818.9" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+      <g>
+        <circle cx="840.0" cy="85.0" r="2.6" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="1.5,1.5" />
+        <circle cx="840.0" cy="85.0" r="0.8" fill="#484f58" />
+      </g>
+
+    <!-- Active Contribution Pellets (disappear into snake mouth via pelletClip) -->
+    <g clip-path="url(#pelletClip)">
+      <g>
+        <circle cx="60.0" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="60.0" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="81.1" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="81.1" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="102.2" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="102.2" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="123.2" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="123.2" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="144.3" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="144.3" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="165.4" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="165.4" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="186.5" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="186.5" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="207.6" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="207.6" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="228.6" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="228.6" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="249.7" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="249.7" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="270.8" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="270.8" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="291.9" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="291.9" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="313.0" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="313.0" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="334.1" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="334.1" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="355.1" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="355.1" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="376.2" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="376.2" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="397.3" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="397.3" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="418.4" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="418.4" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="439.5" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="439.5" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="460.5" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="460.5" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="481.6" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="481.6" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="502.7" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="502.7" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="523.8" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="523.8" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="544.9" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="544.9" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="565.9" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="565.9" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="587.0" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="587.0" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+      <g>
+        <circle cx="608.1" cy="85.0" r="3.2" fill="#3fb950" opacity="0.95" />
+        <circle cx="608.1" cy="85.0" r="1.3" fill="#ffffff" opacity="0.9" />
+      </g>
+    </g>
+
+    <!-- Frontier Milestone Beacon -->
+    <g>
+      <!-- Vertical Beacon Marker -->
+      <line x1="615.4" y1="70.0" x2="615.4" y2="100.0" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="2,2" opacity="0.8" />
+      <!-- Milestone Chevron Pointer -->
+      <polygon points="611.9,68.0 618.9,68.0 615.4,73.0" fill="#38bdf8" />
+      <!-- Frontier Rotating Radar Ring -->
+      <circle cx="615.4" cy="85.0" r="9" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2,2" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate" from="0 615.4 85.0" to="360 615.4 85.0" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <!-- Milestone Arrival Shockwave -->
+      <circle cx="615.4" cy="85.0" r="2" fill="none" stroke="#58a6ff" stroke-width="1.6" opacity="0">
+        <animate attributeName="r" values="2; 2; 16; 22" keyTimes="0; 0.72; 0.770; 1" dur="5.0s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0; 0; 0.9; 0" keyTimes="0; 0.72; 0.760; 1" dur="5.0s" repeatCount="indefinite" />
+      </circle>
+      <!-- Core Frontier Node -->
+      <circle cx="615.4" cy="85.0" r="3" fill="#38bdf8" />
+      <circle cx="615.4" cy="85.0" r="1.2" fill="#ffffff" />
+    </g>
+  </g>
+
+  <!-- Scale Tick Labels Below Track -->
+  <g transform="translate(0, 111.0)">
+    <text x="60.0" y="0" class="scale-label">0% [INIT]</text>
+    <text x="255.0" y="0" text-anchor="middle" class="scale-label">25% (62)</text>
+    <text x="450.0" y="0" text-anchor="middle" class="scale-label">50% (125)</text>
+    <text x="645.0" y="0" text-anchor="middle" class="scale-label">75% (188)</text>
+    <text x="840.0" y="0" text-anchor="end" class="scale-label">100% [250 COMMITS]</text>
+  </g>
+
+  <!-- ANIMATED CYBER-SNAKE EATER -->
+  <g transform="translate(60.0, 85.0)">
+    <animateTransform attributeName="transform" type="translate"
+      values="60.0,85.0; 615.4,85.0; 615.4,85.0; 60.0,85.0"
+      keyTimes="0; 0.72; 0.88; 1"
+      dur="5.0s" repeatCount="indefinite"
+      calcMode="spline" keySplines="0.4 0 0.2 1; 0 0 1 1; 0.4 0 0.2 1" />
+
+    <!-- Undulating Trailing Segments -->
+    <!-- Segment 4 (Tail) -->
+    <circle cx="-34" cy="0" r="3.2" fill="#14532d" opacity="0.7">
+      <animate attributeName="cy" values="0; 2.2; 0; -2.2; 0" dur="0.5s" repeatCount="indefinite" />
+    </circle>
+    <!-- Segment 3 -->
+    <circle cx="-26" cy="0" r="4.6" fill="#166534" opacity="0.8">
+      <animate attributeName="cy" values="0; -2.6; 0; 2.6; 0" dur="0.5s" repeatCount="indefinite" />
+    </circle>
+    <!-- Segment 2 -->
+    <circle cx="-18" cy="0" r="5.8" fill="#15803d" opacity="0.9">
+      <animate attributeName="cy" values="0; 2.8; 0; -2.8; 0" dur="0.5s" repeatCount="indefinite" />
+    </circle>
+    <!-- Segment 1 (Shoulder) -->
+    <circle cx="-10" cy="0" r="7.0" fill="#22c55e" opacity="0.95">
+      <animate attributeName="cy" values="0; -2.2; 0; 2.2; 0" dur="0.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Bio-luminescent Vertebrae Nodes -->
+    <circle cx="-26" cy="0" r="1.1" fill="#38bdf8">
+      <animate attributeName="cy" values="0; -2.6; 0; 2.6; 0" dur="0.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-18" cy="0" r="1.3" fill="#38bdf8">
+      <animate attributeName="cy" values="0; 2.8; 0; -2.8; 0" dur="0.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-10" cy="0" r="1.5" fill="#38bdf8">
+      <animate attributeName="cy" values="0; -2.2; 0; 2.2; 0" dur="0.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Cyber Head Base -->
+    <ellipse cx="-2" cy="0" rx="7.5" ry="6.5" fill="url(#snakeSkin)" stroke="#052e16" stroke-width="0.8" />
+
+    <!-- Cyber Sensor Eye -->
+    <circle cx="2" cy="-4" r="2.2" fill="#38bdf8">
+      <animate attributeName="opacity" values="0.8; 1; 0.8" dur="1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="2.5" cy="-4" r="1.0" fill="#ffffff" />
+
+    <!-- Articulated Chomping Jaws (4 Hz = 0.25s bite cadence) -->
+    <!-- Upper Jaw with Cyber Fangs -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 0 -2; -24 0 -2; 0 0 -2" dur="0.25s" repeatCount="indefinite" />
+      <path d="M -4,-2 L 4,-8 L 12,-4 L 14,-1 L 0,-1 Z" fill="url(#snakeSkin)" stroke="#052e16" stroke-width="0.8" />
+      <polygon points="8,-1 10,-1 9,2.5" fill="#f0f6fc" />
+      <polygon points="4,-1 6,-1 5,2.0" fill="#f0f6fc" />
+    </g>
+
+    <!-- Lower Jaw with Cyber Fangs -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 0 2; 24 0 2; 0 0 2" dur="0.25s" repeatCount="indefinite" />
+      <path d="M -4,2 L 3,8 L 11,4 L 13,1 L 0,1 Z" fill="url(#snakeSkin)" stroke="#052e16" stroke-width="0.8" />
+      <polygon points="8,1 10,1 9,-2.5" fill="#f0f6fc" />
+      <polygon points="4,1 6,1 5,-2.0" fill="#f0f6fc" />
+    </g>
+
+    <!-- Laser Sensor / Cyber Forked Sensor Tongue -->
+    <path d="M 13,0 L 20,0 L 24,-2.5 M 20,0 L 24,2.5" fill="none" stroke="#38bdf8" stroke-width="1" stroke-linecap="round">
+      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.3; 0.7; 1" dur="0.5s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 3,0; 0,0" dur="0.5s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Contact Spark Emitter at mouth bite apex -->
+    <circle cx="12" cy="0" r="2.5" fill="#58a6ff" opacity="0">
+      <animate attributeName="opacity" values="0; 0.9; 0" dur="0.25s" repeatCount="indefinite" />
+      <animate attributeName="r" values="1; 3.5; 1" dur="0.25s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>
