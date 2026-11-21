@@ -144,7 +144,7 @@
   <circle cx="50" cy="17" r="4.5" fill="#27c93f" fill-opacity="0.85" />
 
   <!-- Shell Path & System Status -->
-  <text x="72" y="21" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#7d8590">cid-moosa@forensics-station:~$ whoami<tspan class="cursor-blink" font-weight="700">_</tspan></text>
+  <text x="72" y="21" font-family="'SF Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="11" fill="#7d8590">cidmoosa@forensics-station:~$ whoami<tspan class="cursor-blink" font-weight="700">_</tspan></text>
   
   <g transform="translate(625, 17)">
     <circle cx="0" cy="0" r="3.5" fill="#3fb950" class="status-pulse" />
@@ -162,7 +162,7 @@
 
   <!-- Identity Center -->
   <g transform="translate(450, 84)" text-anchor="middle">
-    <text class="text-title">ARUN.P.S <tspan class="text-alias">// cid-moosa</tspan></text>
+    <text class="text-title">ARUN.P.S <tspan class="text-alias">// cidmoosa</tspan></text>
   </g>
 
   <!-- Specialization Subtitle -->

@@ -460,8 +460,8 @@ def main():
         "--username",
         "--user",
         dest="username",
-        default=os.environ.get("GITHUB_REPOSITORY_OWNER", "cid-moosa"),
-        help="GitHub username (default: cid-moosa or GITHUB_REPOSITORY_OWNER)",
+        default=os.environ.get("GITHUB_REPOSITORY_OWNER", "cidmoosa"),
+        help="GitHub username (default: cidmoosa or GITHUB_REPOSITORY_OWNER)",
     )
     parser.add_argument(
         "--token",
