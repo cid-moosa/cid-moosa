@@ -1,0 +1,79 @@
+<svg id="metrics-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" role="img" aria-label="GitHub profile metrics for cid-moosa">
+  <title>cid-moosa GitHub Telemetry (dark)</title>
+  <defs>
+    <clipPath id="langBarClip"><rect x="28" y="138" width="844" height="8" rx="4"/></clipPath>
+  </defs>
+  <style>
+    #metrics-dark .hdr { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; fill: #8b949e; }
+    #metrics-dark .meta { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10px; font-weight: 500; letter-spacing: 1px; fill: #6e7681; }
+    #metrics-dark .kpi-lbl { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10px; font-weight: 600; letter-spacing: 1.2px; fill: #6e7681; }
+    #metrics-dark .kpi-val { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 700; fill: #f0f6fc; }
+    #metrics-dark .kpi-sub { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; font-weight: 500; fill: #8b949e; }
+    #metrics-dark .kpi-acc { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11px; font-weight: 600; fill: #38bdf8; }
+    #metrics-dark .leg-name { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; fill: #f0f6fc; }
+    #metrics-dark .leg-pct { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10.5px; font-weight: 500; fill: #8b949e; }
+    #metrics-dark .tag-txt { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 500; fill: #f0f6fc; }
+    #metrics-dark .bar-reveal { transform-origin: 28px 142px; animation: barReveal-dark 0.85s cubic-bezier(0.22, 1, 0.36, 1); }
+    #metrics-dark .pulse-dot { animation: softPulse-dark 3.2s ease-in-out infinite; }
+    @keyframes barReveal-dark { from { transform: scaleX(0.08); opacity: 0.35; } to { transform: scaleX(1); opacity: 1; } }
+    @keyframes softPulse-dark { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+    @media (prefers-reduced-motion: reduce) { #metrics-dark .bar-reveal, #metrics-dark .pulse-dot { animation: none; transform: none; opacity: 1; } }
+  </style>
+  <rect x="0" y="0" width="900" height="220" fill="#0d1117"/>
+  <rect x="1" y="1" width="898" height="218" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <circle class="pulse-dot" cx="31" cy="20" r="3" fill="#38bdf8"/>
+  <text class="hdr" x="42" y="24">TELEMETRY // @cid-moosa</text>
+  <text class="meta" x="872" y="24" text-anchor="end">NON-FORKED REPOS &#183; SYNCED 2026-11-27</text>
+  <line x1="1" y1="40" x2="899" y2="40" stroke="#30363d" stroke-width="1"/>
+  <line x1="225" y1="40" x2="225" y2="112" stroke="#30363d" stroke-width="1"/>
+  <line x1="450" y1="40" x2="450" y2="112" stroke="#30363d" stroke-width="1"/>
+  <line x1="675" y1="40" x2="675" y2="112" stroke="#30363d" stroke-width="1"/>
+  <text class="kpi-lbl" x="28" y="62">ORIGINAL REPOS</text>
+  <text x="28" y="92"><tspan class="kpi-val">22</tspan><tspan class="kpi-sub" dx="8">of 22 public</tspan></text>
+  <text class="kpi-lbl" x="253" y="62">TOTAL STARS</text>
+  <text x="253" y="92"><tspan class="kpi-val">25</tspan><tspan class="kpi-sub" dx="8">0 followers</tspan></text>
+  <text class="kpi-lbl" x="478" y="62">365D ACTIVITY</text>
+  <text x="478" y="92"><tspan class="kpi-val">191</tspan><tspan class="kpi-acc" dx="8">33 active days</tspan></text>
+  <text class="kpi-lbl" x="703" y="62">ACCOUNT TENURE</text>
+  <text x="703" y="92"><tspan class="kpi-val">1y 11m</tspan><tspan class="kpi-sub" dx="8">est. 2024</tspan></text>
+  <line x1="1" y1="112" x2="899" y2="112" stroke="#30363d" stroke-width="1"/>
+  <text class="kpi-lbl" x="28" y="130">LANGUAGE DISTRIBUTION</text>
+  <text class="meta" x="872" y="130" text-anchor="end">4.70 MB CODE &#183; NON-FORKED</text>
+  <rect x="28" y="138" width="844" height="8" rx="4" fill="#21262d"/>
+  <g clip-path="url(#langBarClip)">
+    <g class="bar-reveal">
+      <rect x="28.00" y="138" width="248.67" height="8" fill="#38bdf8" stroke="#161b22" stroke-width="1.2"/>
+      <rect x="276.67" y="138" width="137.25" height="8" fill="#e6edf3" stroke="#161b22" stroke-width="1.2"/>
+      <rect x="413.92" y="138" width="120.35" height="8" fill="#94a3b8" stroke="#161b22" stroke-width="1.2"/>
+      <rect x="534.27" y="138" width="116.13" height="8" fill="#0284c7" stroke="#161b22" stroke-width="1.2"/>
+      <rect x="650.40" y="138" width="88.75" height="8" fill="#64748b" stroke="#161b22" stroke-width="1.2"/>
+      <rect x="739.15" y="138" width="132.85" height="8" fill="#30363d" stroke="#161b22" stroke-width="1.2"/>
+    </g>
+  </g>
+  <rect x="28.0" y="154" width="8" height="8" rx="2" fill="#38bdf8"/>
+  <text x="41.0" y="162"><tspan class="leg-name">Python</tspan><tspan class="leg-pct" dx="4">29.5%</tspan></text>
+  <rect x="168.7" y="154" width="8" height="8" rx="2" fill="#e6edf3"/>
+  <text x="181.7" y="162"><tspan class="leg-name">JavaScript</tspan><tspan class="leg-pct" dx="4">16.3%</tspan></text>
+  <rect x="309.3" y="154" width="8" height="8" rx="2" fill="#94a3b8"/>
+  <text x="322.3" y="162"><tspan class="leg-name">Kotlin</tspan><tspan class="leg-pct" dx="4">14.3%</tspan></text>
+  <rect x="450.0" y="154" width="8" height="8" rx="2" fill="#0284c7"/>
+  <text x="463.0" y="162"><tspan class="leg-name">TypeScript</tspan><tspan class="leg-pct" dx="4">13.8%</tspan></text>
+  <rect x="590.7" y="154" width="8" height="8" rx="2" fill="#64748b"/>
+  <text x="603.7" y="162"><tspan class="leg-name">Java</tspan><tspan class="leg-pct" dx="4">10.5%</tspan></text>
+  <rect x="731.3" y="154" width="8" height="8" rx="2" fill="#30363d"/>
+  <text x="744.3" y="162"><tspan class="leg-name">Other</tspan><tspan class="leg-pct" dx="4">15.7%</tspan></text>
+  <line x1="1" y1="176" x2="899" y2="176" stroke="#30363d" stroke-width="1"/>
+  <text class="kpi-lbl" x="28" y="201">FOCUS</text>
+  <rect x="84" y="186" width="166" height="22" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <circle cx="95" cy="197" r="2.2" fill="#38bdf8"/>
+  <text class="tag-txt" x="104" y="201">Tooling &amp; Automation</text>
+  <rect x="260" y="186" width="159" height="22" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <circle cx="271" cy="197" r="2.2" fill="#38bdf8"/>
+  <text class="tag-txt" x="280" y="201">Embedded &amp; Wireless</text>
+  <rect x="429" y="186" width="159" height="22" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <circle cx="440" cy="197" r="2.2" fill="#38bdf8"/>
+  <text class="tag-txt" x="449" y="201">Systems &amp; Forensics</text>
+  <rect x="598" y="186" width="153" height="22" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <circle cx="609" cy="197" r="2.2" fill="#38bdf8"/>
+  <text class="tag-txt" x="618" y="201">Android &amp; USB / RF</text>
+</svg>

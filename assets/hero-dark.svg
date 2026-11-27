@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="100%" role="img" aria-label="cid-moosa — Arun P.S., Systems, Forensics, Embedded RF">
+  <title>cid-moosa — Arun P.S.</title>
+  <desc>Architectural header for cid-moosa (Arun P.S. — Systems, Forensics, Embedded RF)</desc>
+
+  <defs>
+    <clipPath id="cardClip">
+      <rect x="0.5" y="0.5" width="899" height="179" rx="10" />
+    </clipPath>
+
+    <pattern id="microGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#30363d" stroke-width="0.6" stroke-opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <style>
+    svg {
+      display: block;
+    }
+
+    @keyframes gridDrift {
+      0% { transform: translate(0px, 0px); }
+      100% { transform: translate(30px, 0px); }
+    }
+
+    @keyframes drawV {
+      0% { stroke-dashoffset: 180; opacity: 0.2; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    @keyframes drawH {
+      0% { stroke-dashoffset: 540; opacity: 0.2; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    @keyframes drawAccent {
+      0% { stroke-dashoffset: 42; opacity: 0.2; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    @keyframes drawAxisH {
+      0% { stroke-dashoffset: 168; opacity: 0.2; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    @keyframes drawAxisV {
+      0% { stroke-dashoffset: 124; opacity: 0.2; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    @keyframes drawRing {
+      0% { stroke-dashoffset: 327; opacity: 0.2; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    @keyframes drawArc {
+      0% { stroke-dashoffset: 64; opacity: 0.2; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    @keyframes revealUp {
+      0% { opacity: 0; transform: translate(0px, 6px); }
+      100% { opacity: 1; transform: translate(0px, 0px); }
+    }
+
+    @keyframes accentPulse {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.85); opacity: 0.2; }
+    }
+
+    .grid-drift {
+      animation: gridDrift 28s linear infinite;
+    }
+
+    .draw-v {
+      stroke-dasharray: 180;
+      stroke-dashoffset: 180;
+      animation: drawV 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+    }
+
+    .draw-h {
+      stroke-dasharray: 540;
+      stroke-dashoffset: 540;
+      animation: drawH 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+    }
+
+    .draw-accent {
+      stroke-dasharray: 42;
+      stroke-dashoffset: 42;
+      animation: drawAccent 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+    }
+
+    .draw-axis-h {
+      stroke-dasharray: 168;
+      stroke-dashoffset: 168;
+      animation: drawAxisH 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+    }
+
+    .draw-axis-v {
+      stroke-dasharray: 124;
+      stroke-dashoffset: 124;
+      animation: drawAxisV 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+    }
+
+    .draw-ring {
+      stroke-dasharray: 327;
+      stroke-dashoffset: 327;
+      animation: drawRing 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+
+    .draw-arc {
+      stroke-dasharray: 64;
+      stroke-dashoffset: 64;
+      animation: drawArc 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+    }
+
+    .reveal-title {
+      animation: revealUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+    }
+
+    .reveal-sub {
+      animation: revealUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+    }
+
+    .accent-pulse {
+      transform-origin: 0 0;
+      animation: accentPulse 3.2s ease-in-out 0.8s infinite;
+    }
+
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      fill: #f0f6fc;
+    }
+
+    .descriptor {
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      fill: #8b949e;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .grid-drift,
+      .draw-v,
+      .draw-h,
+      .draw-accent,
+      .draw-axis-h,
+      .draw-axis-v,
+      .draw-ring,
+      .draw-arc,
+      .reveal-title,
+      .reveal-sub,
+      .accent-pulse {
+        animation: none !important;
+      }
+
+      .grid-drift,
+      .reveal-title,
+      .reveal-sub {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .draw-v,
+      .draw-h,
+      .draw-accent,
+      .draw-axis-h,
+      .draw-axis-v,
+      .draw-ring,
+      .draw-arc {
+        stroke-dashoffset: 0 !important;
+        opacity: 1 !important;
+      }
+
+      .accent-pulse {
+        opacity: 0.65 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="899" height="179" rx="10" fill="#0d1117" />
+
+  <g clip-path="url(#cardClip)">
+    <rect x="660" y="0" width="240" height="180" fill="#161b22" />
+
+    <g class="grid-drift">
+      <rect x="-30" y="0" width="960" height="180" fill="url(#microGrid)" />
+    </g>
+
+    <line x1="660" y1="0" x2="660" y2="180" stroke="#30363d" stroke-width="1" class="draw-v" />
+
+    <g stroke="#6e7681" stroke-width="1" stroke-opacity="0.6" fill="none">
+      <path d="M 26 30 H 34 M 30 26 V 34" />
+      <path d="M 26 150 H 34 M 30 146 V 154" />
+      <path d="M 626 30 H 634 M 630 26 V 34" />
+      <path d="M 626 150 H 634 M 630 146 V 154" />
+    </g>
+
+    <text x="60" y="84" class="title reveal-title">cid-moosa</text>
+    <line x1="60" y1="105" x2="600" y2="105" stroke="#30363d" stroke-width="1" class="draw-h" />
+    <line x1="60" y1="105" x2="102" y2="105" stroke="#38bdf8" stroke-width="2" class="draw-accent" />
+    <text x="60" y="130" class="descriptor reveal-sub">ARUN P.S. &#183; SYSTEMS &#183; FORENSICS &#183; EMBEDDED RF</text>
+
+    <g transform="translate(780, 90)">
+      <line x1="-84" y1="0" x2="84" y2="0" stroke="#30363d" stroke-width="1" class="draw-axis-h" />
+      <line x1="0" y1="-62" x2="0" y2="62" stroke="#30363d" stroke-width="1" class="draw-axis-v" />
+
+      <g stroke="#6e7681" stroke-width="1" stroke-opacity="0.65" fill="none">
+        <line x1="-72" y1="-2.5" x2="-72" y2="2.5" />
+        <line x1="-52" y1="-3" x2="-52" y2="3" />
+        <line x1="-28" y1="-2.5" x2="-28" y2="2.5" />
+        <line x1="28" y1="-2.5" x2="28" y2="2.5" />
+        <line x1="52" y1="-3" x2="52" y2="3" />
+        <line x1="72" y1="-2.5" x2="72" y2="2.5" />
+        <line x1="-3" y1="-52" x2="3" y2="-52" />
+        <line x1="-2.5" y1="-28" x2="2.5" y2="-28" />
+        <line x1="-2.5" y1="28" x2="2.5" y2="28" />
+        <line x1="-3" y1="52" x2="3" y2="52" />
+      </g>
+
+      <circle cx="0" cy="0" r="52" fill="none" stroke="#30363d" stroke-width="1" class="draw-ring" />
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#6e7681" stroke-width="1" stroke-opacity="0.55" stroke-dasharray="3 4" />
+      <path d="M 9.03 -51.21 A 52 52 0 0 1 51.21 -9.03" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" class="draw-arc" />
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#30363d" stroke-width="1" />
+      <circle cx="0" cy="0" r="4.5" fill="none" stroke="#38bdf8" stroke-width="1.2" class="accent-pulse" />
+      <circle cx="0" cy="0" r="3" fill="#38bdf8" />
+    </g>
+  </g>
+
+  <rect x="0.5" y="0.5" width="899" height="179" rx="10" fill="none" stroke="#30363d" stroke-width="1" />
+</svg>

@@ -1,0 +1,46 @@
+name: Update Profile Metrics SVGs
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/scripts/**"
+      - ".github/workflows/profile-metrics.yml"
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate Profile Metrics SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/generate_profile_metrics.py --username "${{ github.repository_owner }}"
+
+      - name: Verify Profile SVGs
+        run: python .github/scripts/verify_profile_svgs.py
+
+      - name: Commit and Push Updated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/metrics-dark.svg assets/metrics-light.svg
+          if git diff --staged --quiet; then
+            echo "No changes in profile metrics SVGs; skipping commit."
+          else
+            git commit -m "chore(metrics): update profile telemetry SVGs [skip ci]"
+            git push origin main
+          fi
