@@ -23,7 +23,7 @@
   <rect x="1" y="1" width="898" height="218" rx="10" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
   <circle class="pulse-dot" cx="31" cy="20" r="3" fill="#0284c7"/>
   <text class="hdr" x="42" y="24">TELEMETRY // @cid-moosa</text>
-  <text class="meta" x="872" y="24" text-anchor="end">NON-FORKED REPOS &#183; SYNCED 2026-11-27</text>
+  <text class="meta" x="872" y="24" text-anchor="end">NON-FORKED REPOS &#183; SYNCED 2026-11-28</text>
   <line x1="1" y1="40" x2="899" y2="40" stroke="#d0d7de" stroke-width="1"/>
   <line x1="225" y1="40" x2="225" y2="112" stroke="#d0d7de" stroke-width="1"/>
   <line x1="450" y1="40" x2="450" y2="112" stroke="#d0d7de" stroke-width="1"/>
@@ -38,30 +38,30 @@
   <text x="703" y="92"><tspan class="kpi-val">1y 11m</tspan><tspan class="kpi-sub" dx="8">est. 2024</tspan></text>
   <line x1="1" y1="112" x2="899" y2="112" stroke="#d0d7de" stroke-width="1"/>
   <text class="kpi-lbl" x="28" y="130">LANGUAGE DISTRIBUTION</text>
-  <text class="meta" x="872" y="130" text-anchor="end">4.70 MB CODE &#183; NON-FORKED</text>
+  <text class="meta" x="872" y="130" text-anchor="end">4.67 MB CODE &#183; NON-FORKED</text>
   <rect x="28" y="138" width="844" height="8" rx="4" fill="#e6ebf1"/>
   <g clip-path="url(#langBarClip)">
     <g class="bar-reveal">
-      <rect x="28.00" y="138" width="248.67" height="8" fill="#0284c7" stroke="#f6f8fa" stroke-width="1.2"/>
-      <rect x="276.67" y="138" width="137.25" height="8" fill="#1f2328" stroke="#f6f8fa" stroke-width="1.2"/>
-      <rect x="413.92" y="138" width="120.35" height="8" fill="#59636e" stroke="#f6f8fa" stroke-width="1.2"/>
-      <rect x="534.27" y="138" width="116.13" height="8" fill="#38bdf8" stroke="#f6f8fa" stroke-width="1.2"/>
-      <rect x="650.40" y="138" width="88.75" height="8" fill="#8c959f" stroke="#f6f8fa" stroke-width="1.2"/>
-      <rect x="739.15" y="138" width="132.85" height="8" fill="#d0d7de" stroke="#f6f8fa" stroke-width="1.2"/>
+      <rect x="28.00" y="138" width="244.86" height="8" fill="#0284c7" stroke="#f6f8fa" stroke-width="1.2"/>
+      <rect x="272.86" y="138" width="138.13" height="8" fill="#1f2328" stroke="#f6f8fa" stroke-width="1.2"/>
+      <rect x="410.99" y="138" width="121.12" height="8" fill="#59636e" stroke="#f6f8fa" stroke-width="1.2"/>
+      <rect x="532.11" y="138" width="116.88" height="8" fill="#38bdf8" stroke="#f6f8fa" stroke-width="1.2"/>
+      <rect x="648.99" y="138" width="89.31" height="8" fill="#8c959f" stroke="#f6f8fa" stroke-width="1.2"/>
+      <rect x="738.30" y="138" width="133.70" height="8" fill="#d0d7de" stroke="#f6f8fa" stroke-width="1.2"/>
     </g>
   </g>
   <rect x="28.0" y="154" width="8" height="8" rx="2" fill="#0284c7"/>
-  <text x="41.0" y="162"><tspan class="leg-name">Python</tspan><tspan class="leg-pct" dx="4">29.5%</tspan></text>
+  <text x="41.0" y="162"><tspan class="leg-name">Python</tspan><tspan class="leg-pct" dx="4">29.0%</tspan></text>
   <rect x="168.7" y="154" width="8" height="8" rx="2" fill="#1f2328"/>
-  <text x="181.7" y="162"><tspan class="leg-name">JavaScript</tspan><tspan class="leg-pct" dx="4">16.3%</tspan></text>
+  <text x="181.7" y="162"><tspan class="leg-name">JavaScript</tspan><tspan class="leg-pct" dx="4">16.4%</tspan></text>
   <rect x="309.3" y="154" width="8" height="8" rx="2" fill="#59636e"/>
-  <text x="322.3" y="162"><tspan class="leg-name">Kotlin</tspan><tspan class="leg-pct" dx="4">14.3%</tspan></text>
+  <text x="322.3" y="162"><tspan class="leg-name">Kotlin</tspan><tspan class="leg-pct" dx="4">14.4%</tspan></text>
   <rect x="450.0" y="154" width="8" height="8" rx="2" fill="#38bdf8"/>
   <text x="463.0" y="162"><tspan class="leg-name">TypeScript</tspan><tspan class="leg-pct" dx="4">13.8%</tspan></text>
   <rect x="590.7" y="154" width="8" height="8" rx="2" fill="#8c959f"/>
-  <text x="603.7" y="162"><tspan class="leg-name">Java</tspan><tspan class="leg-pct" dx="4">10.5%</tspan></text>
+  <text x="603.7" y="162"><tspan class="leg-name">Java</tspan><tspan class="leg-pct" dx="4">10.6%</tspan></text>
   <rect x="731.3" y="154" width="8" height="8" rx="2" fill="#d0d7de"/>
-  <text x="744.3" y="162"><tspan class="leg-name">Other</tspan><tspan class="leg-pct" dx="4">15.7%</tspan></text>
+  <text x="744.3" y="162"><tspan class="leg-name">Other</tspan><tspan class="leg-pct" dx="4">15.8%</tspan></text>
   <line x1="1" y1="176" x2="899" y2="176" stroke="#d0d7de" stroke-width="1"/>
   <text class="kpi-lbl" x="28" y="201">FOCUS</text>
   <rect x="84" y="186" width="166" height="22" rx="5" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
